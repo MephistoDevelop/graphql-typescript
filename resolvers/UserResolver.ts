@@ -1,7 +1,7 @@
 import { Resolver,Query, Mutation, Arg } from "type-graphql";
 import { Usuario } from "../src/models/Usuario"
-import { CreateUserInput } from "../src/inputs/CreateUserInput"
-import { UpdateUserInput } from "../src/inputs/UpdateUserInput"
+import { CreateUserInput } from "../src/inputs/UserInput/CreateUserInput"
+import { UpdateUserInput } from "../src/inputs/UserInput/UpdateUserInput"
 
 @Resolver(of => Usuario)
 export class UserResolver{

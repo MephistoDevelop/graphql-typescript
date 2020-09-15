@@ -1,5 +1,6 @@
-import {  BaseEntity,PrimaryGeneratedColumn,Column, Entity } from "typeorm";
+import {  BaseEntity,PrimaryGeneratedColumn,Column, Entity,OneToMany } from "typeorm";
 import { ObjectType,Field,ID } from "type-graphql";
+import { Receta } from "./Receta";
 
 @Entity()
 @ObjectType()
@@ -20,6 +21,9 @@ export class Usuario extends BaseEntity{
     @Field(()=>String)
     @Column()
     password: String
+
+    @OneToMany(type => Receta, receta=>receta.usuario)
+    recetas: Receta[]
 }
 
 

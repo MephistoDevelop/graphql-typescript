@@ -3,6 +3,8 @@ import { createConnection } from "typeorm";
 import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
 import { UserResolver } from "../resolvers/UserResolver"
+import { RecetaResolver } from "../resolvers/RecetaResolver"
+import  {CategoriaResolver } from "../resolvers/CategoriaResolver"
 
 
 async function main(){
@@ -11,7 +13,7 @@ async function main(){
         await connection.synchronize();
         
         const schema = await buildSchema({
-            resolvers: [UserResolver]
+            resolvers: [UserResolver,RecetaResolver,CategoriaResolver]
         });
         const server = new ApolloServer({ schema });
         await server.listen(4000);
