@@ -24,3 +24,7 @@ ts-node to run our server in development environment
 nodemon to automatically restart the server whenever we make changes to the code
 
 > npm install -D typescript ts-node nodemon
+
+To use Mysql or PsSQl Database Engine on the project we need to install the driver for Node.js using this command:
+
+> npm install psql
