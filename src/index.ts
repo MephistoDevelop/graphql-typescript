@@ -8,6 +8,8 @@ import { UserResolver } from "../resolvers/UserResolver"
 async function main(){
     try{
         const connection = await createConnection();
+        await connection.synchronize();
+        
         const schema = await buildSchema({
             resolvers: [UserResolver]
         });

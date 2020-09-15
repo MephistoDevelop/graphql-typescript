@@ -28,3 +28,7 @@ nodemon to automatically restart the server whenever we make changes to the code
 To use Mysql or PsSQl Database Engine on the project we need to install the driver for Node.js using this command:
 
 > npm install psql
+
+We need to install class validator to resolvers with this command:
+
+> npm i class-validator
