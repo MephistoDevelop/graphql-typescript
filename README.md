@@ -1,6 +1,6 @@
 Graphql API with Apollo Server TypeORM and Typescript
 
-commands used to create the project:
+commands used to create this project:
 
 > npm init -y
 

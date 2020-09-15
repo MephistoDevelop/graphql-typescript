@@ -1,9 +1,11 @@
 import { Resolver,Query } from "type-graphql";
+import { Usuario } from "../src/models/Usuario"
 
 @Resolver()
 export class UserResolver{
-    @Query(()=>String)
-    hello(){
-        return "Hello World";
+    @Query(()=>[Usuario])
+ 
+    users(){
+        return Usuario.find()
     }
 }
