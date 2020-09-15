@@ -10,6 +10,11 @@ export class UserResolver{
         return Usuario.find()
     }
 
+    @Query(()=>Usuario)
+        usuarioID(@Arg("id") id: string){
+        return Usuario.findOne({ where:{ id }})
+    }
+
     @Mutation(() => Usuario)
     async createUser(@Arg("data") data:CreateUserInput){
             const usuario = Usuario.create(data);

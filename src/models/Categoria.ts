@@ -1,7 +1,7 @@
 import { BaseEntity,Entity,PrimaryGeneratedColumn,Column} from "typeorm";
 
 @Entity()
-export class Receta extends BaseEntity{
+export class Categoria extends BaseEntity{
     @PrimaryGeneratedColumn()
     ID: String
 
