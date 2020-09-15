@@ -37,4 +37,14 @@ export class UserResolver{
 
         return usuario;
     }
+
+    @Mutation(()=>Boolean)
+    async DeleteUsuario(@Arg("id") id:string){
+        const usuario = await Usuario.findOne({where: { id }});
+
+        if(!usuario) throw new Error("No existe Usuario con ese ID");
+        
+        await usuario.remove()
+        return true;
+    }
 }
